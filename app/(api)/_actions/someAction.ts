@@ -46,5 +46,6 @@ export default async function UserAction() {
   });
 
   const user = await res.json();
+  console.log(JSON.stringify(user));
   return JSON.stringify(user);
 }

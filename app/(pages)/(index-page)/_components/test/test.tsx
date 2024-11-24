@@ -3,7 +3,7 @@
 // import { gql } from '@apollo/client';
 
 import UserAction from '@actions/someAction';
-import { useState } from 'react';
+// import { useState } from 'react';
 
 // const query = gql`
 //   query GetPlaylists {
@@ -34,19 +34,19 @@ export default function Page() {
   //   },
   // });
 
-  const [user, setUser] = useState('nothing');
+  // const [user, setUser] = useState('nothing');
 
   return (
     <div>
       <h1>Playlists</h1>
       <form
         action={async () => {
-          setUser(await UserAction());
+          await UserAction();
         }}
       >
         <button type="submit">Sign in</button>
       </form>
-      <pre>{JSON.stringify(user, null, 2)}</pre>
+      {/* <pre>{JSON.stringify(user, null, 2)}</pre> */}
     </div>
   );
 }
